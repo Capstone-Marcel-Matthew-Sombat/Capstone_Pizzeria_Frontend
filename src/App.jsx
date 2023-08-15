@@ -1,12 +1,20 @@
-import './App.css'
+import React from "react";
+
+import PageContent from "./components/PageContainer";
+import NavBar from "./components/Navbar";
+import Footer from "./components/Footer";
+
+import "./App.css";
+import "./components/styles/Header.css"
 
 function App() {
-
   return (
     <>
-    <h1>Capstone Project</h1>
+      <NavBar />
+      <PageContent />
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
