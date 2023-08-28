@@ -1,0 +1,35 @@
+#root {
+  margin: 0 auto;
+  /* text-align: center; */
+  max-width: 1200px;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+box-shadow: 0 0 10px rgba(0,0,0.1);
+
+}
+
+html,
+body {
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#fixed-header {
+  position: sticky;
+  top: 0;
+  background-color: #ffcc00;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+#main-content {
+  padding-top: 0;
+}

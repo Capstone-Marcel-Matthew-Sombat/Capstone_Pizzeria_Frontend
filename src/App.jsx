@@ -1,18 +1,21 @@
 import React from "react";
-
 import PageContent from "./components/PageContainer";
 import NavBar from "./components/Navbar";
-import Footer from "./components/Footer";
-
-import "./App.css";
-import "./components/styles/Header.css"
+import "../src/components/styles/App.css";
+import "../src/components/styles/navbar.css";
 
 function App() {
   return (
     <>
-      <NavBar />
-      <PageContent />
-      <Footer />
+      <div id="fixed-header">
+        <img src="src/components/photos/logo.png" alt="logo" width="120px" />
+        <NavBar />
+      </div>
+
+      <div id="main-content">
+        
+        <PageContent />
+      </div>
     </>
   );
 }
