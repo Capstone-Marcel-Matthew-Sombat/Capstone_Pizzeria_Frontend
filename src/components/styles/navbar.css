@@ -1,0 +1,38 @@
+#navbar {
+    color: #000000;
+    display: flex;
+    padding: 2em;
+    gap: 20px;
+    width: 400px;
+    justify-content: space-evenly;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-family: 'Kanit', sans-serif;
+  }
+
+  #navbar a {
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  #navbar a:hover {
+    color: #eb0029;
+  }
+
+  #signin-n-cart {
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-family: 'Kanit', sans-serif;
+
+  }
+
+  .sign-in-btn, .cart-icon {
+    color: #000000;
+    text-decoration: none;
+  }
+
+
+  
