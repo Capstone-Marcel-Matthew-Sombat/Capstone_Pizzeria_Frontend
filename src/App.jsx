@@ -3,6 +3,7 @@ import PageContent from "./components/PageContainer";
 import NavBar from "./components/Navbar";
 import "../src/components/styles/App.css";
 import "../src/components/styles/navbar.css";
+import "../src/components/styles/media-query.css"
 
 function App() {
   return (

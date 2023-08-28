@@ -1,0 +1,16 @@
+@media (max-width: 768px) {
+  #fixed-header,
+  #navbar,
+  #signin-n-cart {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  #navbar a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+  }
+}
