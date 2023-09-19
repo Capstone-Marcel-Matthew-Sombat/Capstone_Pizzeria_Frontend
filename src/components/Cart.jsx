@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
 
-const Cart = () => {
-    const [cart, setCart] = useState([]);
-
-    const addToCart = (menu) => {
-        setCart(prevCart => [...prevCart, menu]);
-    };
+const Cart = ({cart}) => {
+    console.log(cart)
 
     return (
         <div>
