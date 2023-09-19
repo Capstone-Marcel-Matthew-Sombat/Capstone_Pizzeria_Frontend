@@ -1,25 +1,29 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import SignIn from "./signIn";
-import Login from "./login";
 import Home from "./Homepage";
-import MenuList from "./MenuPage";
 import ContactPage from "./ContactUs";
+import LoginCustomer from "./LoginCustomer";
+import LogoutCustomer from "./LogoutCustomer";
+import RegisterCustomer from "./RegisterCustomer";
+import Cart from "./Cart";
+import AllMenus from "./AllMenus";
 
-const PageContent = () => {
+const PagesContener = () => {
   return (
     <>
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/menus" element={<MenuList />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/login-customer" element={<LoginCustomer />} />
+          <Route path="/logout-customer" element={<LogoutCustomer />} />
+          <Route path="/register-customer" element={<RegisterCustomer />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/all-menus" element={<AllMenus />} />
         </Routes>
       </div>
     </>
   );
 };
 
-export default PageContent;
+export default PagesContener;
