@@ -1,0 +1,23 @@
+#cover-image {
+  position: relative;
+}
+
+#cover-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#welcome-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+  padding: 10px 20px;
+  background: rgba(2, 0, 0, 0.796);
+  border-radius: 5px;
+}

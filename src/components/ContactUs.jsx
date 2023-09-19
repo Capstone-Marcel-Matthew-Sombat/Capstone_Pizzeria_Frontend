@@ -1,13 +1,58 @@
-import React from 'react';
+import React from "react";
 
 const ContactPage = () => {
   return (
     <div className="contact-page">
-      <h1>Contact Us</h1>
-      <p>If you have any questions or feedback, please feel free to contact us:</p>
-      <div className="contact-info">
-        <p>Email: capstone@pizza.com</p>
-        <p>Phone: 123-456-7890</p>
+      <div className=" registerForm">
+        <h2 id="form-padding">Contact Us</h2>
+        <form>
+          <div className="form-group">
+            <label htmlFor="name">Name:</label>
+            <input
+              type="text"
+              className="form-control"
+              id="name"
+              placeholder="Enter name"
+              name="name"
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="email">Email:</label>
+            <input
+              type="email"
+              className="form-control"
+              id="email"
+              placeholder="Enter email"
+              name="email"
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="phone">Phone:</label>
+            <input
+              type="tel"
+              className="form-control"
+              id="phone"
+              placeholder="Enter phone number"
+              name="phone"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="message">Message:</label>
+            <textarea
+              className="form-control"
+              id="message"
+              rows="4"
+              placeholder="Your message"
+              name="message"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" className="btn btn-primary mt-5">
+            Send Message
+          </button>
+        </form>
       </div>
     </div>
   );

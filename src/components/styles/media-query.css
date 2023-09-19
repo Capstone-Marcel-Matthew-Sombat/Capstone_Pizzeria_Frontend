@@ -1,4 +1,8 @@
 @media (max-width: 768px) {
+  #fixed-header {
+    grid-template-columns: 1fr;
+  }
+
   #fixed-header,
   #navbar,
   #signin-n-cart {
@@ -7,10 +11,32 @@
     gap: 15px;
   }
 
+  #logo-image {
+    /* order: -1;
+    padding-left: 0%; */
+    display: none;
+  }
+
   #navbar a {
     display: block;
     width: 100%;
     text-align: center;
     padding: 5px 0;
+  }
+
+  /* #cover-image img {
+    width: 100%;    
+    height: auto;     
+    max-height: 200px; 
+  }
+
+  #welcome-text {
+    font-size: 1em; 
+    padding: 5px;
+  } */
+
+  #cover-image,
+  #welcome-text {
+    display: none;
   }
 }
