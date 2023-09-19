@@ -1,24 +1,39 @@
 import React from "react";
-import PageContent from "./components/PageContainer";
-import NavBar from "./components/Navbar";
-import SignIn from "./components/signIn";
-import Login from "./components/login";
+import PagesContener from "./components/PageContainer";
+import Header from "./assets/header";
+import Footer from "./components/Footer";
+import { Link } from "react-router-dom";
+
 import "../src/components/styles/App.css";
-import "../src/components/styles/navbar.css";
+import "../src/components/styles/Header.css";
+import "../src/components/styles/Footer.css";
+import "../src/components/styles/homepage.css";
 import "../src/components/styles/media-query.css";
+import "../src/components/styles/MenuStyles.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.css";
 
 function App() {
   return (
     <>
       <div id="fixed-header">
-        <img src="src/components/photos/logo.png" alt="logo" width="120px" />
-        <NavBar />
+        <Link to="/">
+          <img
+            src="src/assets/logo.png"
+            id="logo-image"
+            alt="logo"
+            width="120px"
+          />
+        </Link>
+        <Header />
       </div>
 
-      <div id="main-content">
-        <PageContent />
+      <div className="content-wrapper">
+        <PagesContener />
+      </div>
 
-        {/* Include the SignIn component */}
+      <div>
+        <Footer />
       </div>
     </>
   );

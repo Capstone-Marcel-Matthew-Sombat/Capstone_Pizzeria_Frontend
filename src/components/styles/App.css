@@ -5,8 +5,7 @@
   width: 100%;
   min-height: 100vh;
   background-color: #ffffff;
-box-shadow: 0 0 10px rgba(0,0,0.1);
-
+  box-shadow: 0 0 10px rgba(0, 0, 0.1);
 }
 
 html,
@@ -18,18 +17,41 @@ body {
   width: 100%;
 }
 
-#fixed-header {
-  position: sticky;
-  top: 0;
-  background-color: #ffcc00;
-  z-index: 1000;
+.content-wrapper {
+  min-height: 100vh;
+}
 
+.registerForm {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.form-group {
+  padding: 10px 0;
+}
+
+#registerForm {
+  justify-content: end;
+}
+
+.center {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 20px;
 }
 
-#main-content {
-  padding-top: 0;
+#form-padding {
+  padding-top: 30px;
+  text-align: center;
+}
+
+#section-note {
+  font-size: 0.7em;
+  color: #bf191b;
+  font-style: italic;
+}
+
+#add-to-cart a:hover {
+color: #ffbf00;
 }

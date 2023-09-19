@@ -1,0 +1,27 @@
+.footer {
+  background-color: #999999;
+  color: #000000;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.social-icons.footer-icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 2em;
+  background-color: #f9f9f9;
+}
+
+.social-icons.footer-icons > div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding-bottom: 2em;
+}
+
+.social-icons.footer-icons h3 {
+  color: #cb2121;
+}
