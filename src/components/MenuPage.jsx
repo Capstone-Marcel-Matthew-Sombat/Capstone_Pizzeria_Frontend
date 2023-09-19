@@ -15,6 +15,7 @@ const MenuList = () => {
                 <h3>{item.name}</h3>
                 <p className="item-price">{item.price}</p>
                 <p className="item-description">{item.description}</p>
+                
               </div>
             ))}
           </div>

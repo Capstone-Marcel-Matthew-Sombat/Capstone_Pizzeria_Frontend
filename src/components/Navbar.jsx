@@ -16,6 +16,14 @@ const NavBar = () => {
         Sign In
       </Link>
 
+{/* Sign-In Button */}
+<Link to="/login" className="nav-link">
+        <FontAwesomeIcon icon={faSignInAlt} />
+        Login
+      </Link>
+
+
+
       {/* Cart Icon */}
       <Link to="/cart" className="nav-link">
         <FontAwesomeIcon icon={faShoppingCart} />

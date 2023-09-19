@@ -1,7 +1,8 @@
 import React from "react";
 import PageContent from "./components/PageContainer";
 import NavBar from "./components/Navbar";
-import SignIn from "./SignIn"; // Import the SignIn component
+import SignIn from "./components/signIn";
+import Login from "./components/login";
 import "../src/components/styles/App.css";
 import "../src/components/styles/navbar.css";
 import "../src/components/styles/media-query.css";
@@ -16,7 +17,8 @@ function App() {
 
       <div id="main-content">
         <PageContent />
-        <SignIn /> {/* Include the SignIn component */}
+
+        {/* Include the SignIn component */}
       </div>
     </>
   );
