@@ -1,5 +1,5 @@
 import React from "react";
-import PagesContener from "./components/PageContainer";
+import PagesContainer from "./components/PagesContainer";
 import Header from "./assets/header";
 import Footer from "./components/Footer";
 import { Link } from "react-router-dom";
@@ -29,7 +29,7 @@ function App() {
       </div>
 
       <div className="content-wrapper">
-        <PagesContener />
+        <PagesContainer />
       </div>
 
       <div>
