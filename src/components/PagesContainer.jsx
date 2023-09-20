@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./Homepage";
 import ContactPage from "./ContactUs";
@@ -9,6 +9,12 @@ import Cart from "./Cart";
 import AllMenus from "./AllMenus";
 
 const PagesContainer = () => {
+  const [cart, setCart] = useState([]);
+
+  const addToCart = (menu) => {
+    setCart((prevCart) => [...prevCart, menu]);
+  };
+
   return (
     <>
       <div>
@@ -18,8 +24,11 @@ const PagesContainer = () => {
           <Route path="/login-customer" element={<LoginCustomer />} />
           <Route path="/logout-customer" element={<LogoutCustomer />} />
           <Route path="/register-customer" element={<RegisterCustomer />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/all-menus" element={<AllMenus />} />
+          <Route path="/cart" element={<Cart cart={cart} />} />
+          <Route
+            path="/all-menus"
+            element={<AllMenus addToCart={addToCart} />}
+          />
         </Routes>
       </div>
     </>
