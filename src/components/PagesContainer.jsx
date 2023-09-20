@@ -8,7 +8,7 @@ import RegisterCustomer from "./RegisterCustomer";
 import Cart from "./Cart";
 import AllMenus from "./AllMenus";
 
-const PagesContener = () => {
+const PagesContainer = () => {
   return (
     <>
       <div>
@@ -26,4 +26,4 @@ const PagesContener = () => {
   );
 };
 
-export default PagesContener;
+export default PagesContainer;
