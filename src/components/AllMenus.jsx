@@ -26,6 +26,9 @@ const AllMenus = ({ addToCart }) => {
     navigate(`/menu/${id}`);
   };
 
+  const onClick = () => {
+    
+  }
   return (
     <>
       <div>

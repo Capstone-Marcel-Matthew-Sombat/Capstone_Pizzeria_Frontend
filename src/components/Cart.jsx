@@ -1,14 +1,23 @@
-import React, { useState } from 'react';
+import React from "react";
+import CountItem from "./CountItem";
 
-const Cart = ({cart}) => {
-    console.log(cart)
+const Cart = ({ cart }) => {
+  console.log(cart);
 
-    return (
-        <div>
-            <h1>this is cart</h1>
-            {/* items in your cart */}
-        </div>
-    );
+  return (
+    <div className="cart-items">
+      <div className="cart-items-header">Cart Items</div>
+
+      {cart.length === 0 && (
+        <div className="cart-items-empty"> No items are added.</div>
+      )}
+      <div>
+        {cart?.map((menu) => {
+          return <CountItem key={menu.id} menu={menu} count={1} />;
+        })}
+      </div>
+    </div>
+  );
 };
 
 export default Cart;
