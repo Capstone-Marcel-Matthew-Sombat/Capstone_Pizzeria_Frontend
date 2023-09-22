@@ -8,13 +8,14 @@ import RegisterCustomer from "./RegisterCustomer";
 import Cart from "./Cart";
 import AllMenus from "./AllMenus";
 
-const PagesContener = () => {
+const PageContainer = () =>  {
   const [cart, setCart] = useState([]);
 
   const addToCart = (menu) => {
-    setCart((prevCart) => [...prevCart, menu]);
+   setCart((prevCart) => [...prevCart, menu]);
+   
   };
-
+   
   return (
     <>
       <div>
@@ -35,4 +36,4 @@ const PagesContener = () => {
   );
 };
 
-export default PagesContener;
+export default PageContainer;
