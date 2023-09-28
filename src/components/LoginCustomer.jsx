@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const LoginCustomer = () => {
   const navigate = useNavigate();
-  
+
   const login = async (e) => {
     e.preventDefault();
     const data = new FormData(e.target);
@@ -15,7 +15,7 @@ const LoginCustomer = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/customer/login",
+        "https://capstone-pizzeria-backend.onrender.com/customer/login",
         registerData
       );
       let d = new Date();
@@ -72,7 +72,6 @@ const LoginCustomer = () => {
             No Account? <Link to="/register-customer">Sign Up</Link>
           </p>
         </div>
-        
       </div>
     </>
   );

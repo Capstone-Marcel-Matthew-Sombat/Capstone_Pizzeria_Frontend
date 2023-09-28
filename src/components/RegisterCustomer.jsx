@@ -15,7 +15,7 @@ const RegisterCustomer = () => {
 
     try {
       const returnData = await axios.post(
-        "http://localhost:8080/customer/customer",
+        "https://capstone-pizzeria-backend.onrender.com/customer/customer",
         registerData
       );
       toast.success("Sign Up Successfully, please log in");
@@ -194,11 +194,7 @@ const RegisterCustomer = () => {
 
           <div className="form-group col-md-3">
             <label htmlFor="inputZip">Country</label>
-            <input
-              type="text"
-              className="form-control"
-              name="country"
-            />
+            <input type="text" className="form-control" name="country" />
           </div>
         </div>
 
