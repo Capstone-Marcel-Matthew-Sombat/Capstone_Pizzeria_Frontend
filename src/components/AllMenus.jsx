@@ -13,9 +13,6 @@ const AllMenus = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const isAdminLoggedIn = Cookies.get("Adminlogin");
 
-  const [searchTerm, setSearchTerm] = useState("");
-
-
   const getAllMenus = async () => {
     try {
       const result = await axios.get("http://localhost:8080/menu/menuitems");
@@ -44,8 +41,17 @@ const AllMenus = () => {
       <div>
         <h1 id="form-padding">Menus</h1>
 
-
         {/* search bar */}
+        <div className="search-container">
+          <input
+            type="text"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            placeholder="Search..."
+            className="form-control search-input"
+          />
+          {filteredMenus.length === 0 && <p>No posts found{searchTerm}</p>}
+        </div>
         <div className="menu-page">
           <div className="menu-items">
             {filteredMenus.map((menu) => (
