@@ -8,6 +8,9 @@ const AllMenus = ({ addToCart, removeFromCart }) => {
   const [menus, setMenus] = useState([]);
   const isAdminLoggedIn = Cookies.get("Adminlogin");
 
+  const [searchTerm, setSearchTerm] = useState("");
+
+
   const getAllMenus = async () => {
     try {
       const result = await axios.get("http://localhost:8080/menu/menuitems");
@@ -29,14 +32,30 @@ const AllMenus = ({ addToCart, removeFromCart }) => {
   const onClick = () => {
 
   }
+  //filter from all menu
+  const filteredMenus = menus.filter((menu) =>
+    menu.name.toLowerCase().includes(searchTerm.trim().toLowerCase())
+  );
+
   return (
     <>
       <div>
         <h1 id="form-padding">Menus</h1>
 
+        <div className="search-container">
+          <input
+            type="text"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            placeholder="Search..."
+            className="form-control search-input"
+          />
+
+          {filteredMenus.length === 0 && <p>No posts found{searchTerm}</p>}
+        </div>
         <div className="menu-page">
           <div className="menu-items">
-            {menus.map((menu) => (
+            {filteredMenus.map((menu) => (
               <div key={menu.item_id} className="menu-item">
                 {isAdminLoggedIn && (
                   <button
