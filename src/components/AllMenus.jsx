@@ -1,11 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 
-const AllMenus = ({ addToCart, removeFromCart }) => {
+import { CartContext } from "./context/CartContext";
+
+// const AllMenus = ({ addToCart }) => {
+const AllMenus = () => {
+  const { addToCart } = useContext(CartContext);
   const navigate = useNavigate();
   const [menus, setMenus] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
   const isAdminLoggedIn = Cookies.get("Adminlogin");
 
   const [searchTerm, setSearchTerm] = useState("");
@@ -29,9 +34,6 @@ const AllMenus = ({ addToCart, removeFromCart }) => {
     navigate(`/menu/${id}`);
   };
 
-  const onClick = () => {
-
-  }
   //filter from all menu
   const filteredMenus = menus.filter((menu) =>
     menu.name.toLowerCase().includes(searchTerm.trim().toLowerCase())
@@ -42,17 +44,8 @@ const AllMenus = ({ addToCart, removeFromCart }) => {
       <div>
         <h1 id="form-padding">Menus</h1>
 
-        <div className="search-container">
-          <input
-            type="text"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder="Search..."
-            className="form-control search-input"
-          />
 
-          {filteredMenus.length === 0 && <p>No posts found{searchTerm}</p>}
-        </div>
+        {/* search bar */}
         <div className="menu-page">
           <div className="menu-items">
             {filteredMenus.map((menu) => (
@@ -69,7 +62,13 @@ const AllMenus = ({ addToCart, removeFromCart }) => {
                 <h5 className="item-name">{menu.name}</h5>
                 <p className="item-description">{menu.description}</p>
                 <p className="item-price">${menu.price}</p>
-                <button onClick={() => addToCart(menu)} className="btn btn-warning" id="add-to-cart">Add to cart</button>
+                <button
+                  onClick={() => addToCart(menu)}
+                  className="btn btn-warning"
+                  id="add-to-cart"
+                >
+                  Add to cart
+                </button>
               </div>
             ))}
           </div>

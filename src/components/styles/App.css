@@ -55,3 +55,9 @@ body {
 #add-to-cart a:hover {
 color: #ffbf00;
 }
+
+.has-account {
+  text-align: center;
+}
+
+

@@ -1,0 +1,141 @@
+.cartItemsContainer {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+}
+.emptyCart {
+  text-align: center;
+  color: #000000;
+  margin: 16px 0;
+}
+
+.cartItem {
+  background-color: #fff7dc;
+  padding: 20px;
+  margin: 8px 0;
+}
+
+.cartItem h5,
+.cartItem p {
+  margin-bottom: 10px;
+}
+
+.amountControls {
+  display: flex;
+  justify-content: left;
+}
+
+.amountControls div {
+  cursor: pointer;
+  color: #666;
+  margin-right: 16px;
+}
+
+.cart-total {
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.itemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.itemHeader div {
+  cursor: pointer;
+}
+
+.amount {
+  margin-right: 16px;
+}
+
+.itemActions {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.itemDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.itemDetails p {
+  margin: 0;
+}
+
+.deleteItem {
+  cursor: pointer;
+  font-size: 24px;
+  color: #000000;
+  transition: color 0.5s ease;
+}
+
+.deleteItem:hover {
+  color: #ff0000;
+}
+
+.modal-details {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  max-height: 300px;
+  border-radius: 30px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  outline: none;
+  border: 1px solid #cccccc;
+}
+
+.close-icon {
+  position: absolute;
+  z-index: 30;
+  top: 0.5rem;
+  right: 0.5rem;
+  cursor: pointer;
+  transition: transform 200ms;
+}
+.close-icon:hover {
+  transform: scale(1.1);
+}
+
+.close-icon-size {
+  color: #ff0000;
+  font-size: 3em;
+}
+
+.btn-checkout {
+  align-items: center;
+  font-weight: 600;
+}
+
+.cart-checkout-details {
+  padding: 20px;
+}
+
+.checkout-item {
+  margin-bottom: 10px;
+}
+
+.checkout-total {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.center-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.success-checkout {
+  width: 150px;
+  height: 150px;
+}

@@ -1,23 +1,20 @@
-import PageContainer from "./components/PageContainer";
-import Header from "./assets/header";
+import React from "react";
+import PagesContainer from "./components/PageContainer";
+import Header from "./assets/Header";
 import Footer from "./components/Footer";
 import { Link } from "react-router-dom";
 
-// import CountItem from "./components/CountItem";
 import "../src/components/styles/App.css";
 import "../src/components/styles/Header.css";
 import "../src/components/styles/Footer.css";
 import "../src/components/styles/homepage.css";
+import "../src/components/styles/Cart.css";
 import "../src/components/styles/media-query.css";
 import "../src/components/styles/MenuStyles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/css/bootstrap.css";
-import React from "react";
- 
 
 function App() {
-
-
   return (
     <>
       <div id="fixed-header">
@@ -33,7 +30,7 @@ function App() {
       </div>
 
       <div className="content-wrapper">
-        <PageContainer />
+        <PagesContainer />
       </div>
 
       <div>

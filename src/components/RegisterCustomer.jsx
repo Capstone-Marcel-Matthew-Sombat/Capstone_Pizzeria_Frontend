@@ -2,8 +2,11 @@
 import React from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { Link, useNavigate } from "react-router-dom";
 
 const RegisterCustomer = () => {
+  const navigate = useNavigate();
+
   const submit = async (e) => {
     e.preventDefault();
     const data = new FormData(e.target);
@@ -17,6 +20,7 @@ const RegisterCustomer = () => {
       );
       toast.success("Sign Up Successfully, please log in");
       console.log(returnData);
+      navigate("/login-customer");
     } catch (e) {
       const error = e.response.data;
       if (error.includes("already")) {
@@ -30,6 +34,7 @@ const RegisterCustomer = () => {
   return (
     <div>
       <h1 id="form-padding">Sign Up</h1>
+
       <form onSubmit={submit} className="registerForm">
         <div className="form-group">
           <label>Your Username</label>
@@ -108,12 +113,12 @@ const RegisterCustomer = () => {
         </div>
 
         <div className="form-row">
-          <div className="form-group col-md-2">
+          <div className="form-group col-md-3">
             <label htmlFor="inputCity">City</label>
             <input type="text" className="form-control" name="city" required />
           </div>
 
-          <div className="form-group col-md-2">
+          <div className="form-group col-md-3">
             <label htmlFor="state">State</label>
             <select
               name="state"
@@ -177,7 +182,7 @@ const RegisterCustomer = () => {
             </select>
           </div>
 
-          <div className="form-group col-md-2">
+          <div className="form-group col-md-3">
             <label htmlFor="inputZip">Zip</label>
             <input
               type="text"
@@ -187,13 +192,12 @@ const RegisterCustomer = () => {
             />
           </div>
 
-          <div className="form-group col-md-2">
+          <div className="form-group col-md-3">
             <label htmlFor="inputZip">Country</label>
             <input
               type="text"
               className="form-control"
               name="country"
-              required
             />
           </div>
         </div>
@@ -202,6 +206,12 @@ const RegisterCustomer = () => {
           Register
         </button>
       </form>
+
+      <div className="has-account">
+        <p>
+          Already have an account? <Link to="/login-customer">Sign in</Link>
+        </p>
+      </div>
     </div>
   );
 };
