@@ -15,7 +15,9 @@ const AllMenus = () => {
 
   const getAllMenus = async () => {
     try {
-      const result = await axios.get("http://localhost:8080/menu/menuitems");
+      const result = await axios.get(
+        "https://capstone-pizzeria-backend.onrender.com/menu/menuitems"
+      );
       // console.log(result.data);
       setMenus(result.data);
     } catch (error) {
