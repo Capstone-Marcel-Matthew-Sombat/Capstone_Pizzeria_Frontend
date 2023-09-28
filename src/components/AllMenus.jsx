@@ -3,7 +3,7 @@ import axios from "axios";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 
-const AllMenus = ({ addToCart }) => {
+const AllMenus = ({ addToCart, removeFromCart }) => {
   const navigate = useNavigate();
   const [menus, setMenus] = useState([]);
   const isAdminLoggedIn = Cookies.get("Adminlogin");
@@ -27,7 +27,7 @@ const AllMenus = ({ addToCart }) => {
   };
 
   const onClick = () => {
-    
+
   }
   return (
     <>
