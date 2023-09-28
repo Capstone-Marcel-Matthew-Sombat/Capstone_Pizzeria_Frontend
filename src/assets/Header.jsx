@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import Cookies from "js-cookie";
 
+//icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart, faHome } from "@fortawesome/free-solid-svg-icons";
 
@@ -23,12 +24,12 @@ const Header = () => {
             Menus
           </Link>
 
-          <Link
+          {/* <Link
             to="/contact"
             className={location.pathname === "/contact" ? "active" : ""}
           >
             Contact
-          </Link>
+          </Link> */}
           {login ? (
             <>
               <Link

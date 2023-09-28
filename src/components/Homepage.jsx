@@ -14,8 +14,6 @@ const Home = () => {
         </video>
       </div>
 
-      {/* <div id="welcome-text">Welcome to Capstone Pizzeria</div> */}
-
       <div className="home-menu"></div>
 
       {/* embeded google map */}
